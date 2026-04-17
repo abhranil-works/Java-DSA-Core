@@ -1062,69 +1062,70 @@
 
 // 7: Counter of Positives, Negatives and Zeros.
 
-// import java.util.Scanner;
+import java.util.Scanner;
 
-//   public class Again {
+  public class Again {
 
-//       public static void counterPNZ() {
-//             Scanner sc = new Scanner (System.in);
-//             int positive = 0, negative = 0, zero = 0; //Usings these are all as Initializations.
+      public static void counterPNZ() {
+            Scanner sc = new Scanner (System.in);
+            int positive = 0, negative = 0, zero = 0; //Usings these are all as Initializations.
 
-//             String choice;
+            String choice;
 
-//             do {
-//             System.out.print("\nEnter Your Number: "); //This numbers given from users for counting their positive, negative and zero numbers quantity.
-//             double number = sc.nextDouble();
-//             sc.nextLine(); //We using it as a 'Buffer' for cleaning that "Return Key or Enter Key" from the RAM's Temporary Storage.
+            do {
+            System.out.print("\nEnter Your Number: "); //This numbers given from users for counting their positive, negative and zero numbers quantity.
+            double number = sc.nextDouble();
+            sc.nextLine(); //We using it as a 'Buffer' for cleaning that "Return Key or Enter Key" from the RAM's Temporary Storage.
 
-//              //We use "do-while" condition to make it clean and fast for computer.
+             //We use "do-while" condition to make it clean and fast for computer.
 
-//             if (number > 0) {
+            if (number > 0) {
 
-//                   positive++;
+                  positive++;
 
-//             } else if (number < 0 ) { 
+            } else if (number < 0 ) { 
 
-//                   negative++;
+                  negative++;
                 
-//             } else {
+            } else {
 
-//                   zero++;
-//             }
+                  zero++;
+            }
 
-//             System.out.println ("\nIf you want to be countinue our counter please type (y/yes): ");  
-//             choice = sc.nextLine();
+            System.out.println ("\nIf you want to be countinue our counter please type (y/yes): ");  
+            choice = sc.nextLine();
 
 
-//             } while (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes")); //We use this 'equalsIgnoreCase' for allow this code to recive any type of letters between "Capotal" or "Small", e.g. y or Y even yes or Yes or again YES among. It is the only true condition, others are all false.
+            } while (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes")); //We use this 'equalsIgnoreCase' for allow this code to recive any type of letters between "Capotal" or "Small", e.g. y or Y even yes or Yes or again YES among. It is the only true condition, others are all false.
 
-//             System.out.println ("\nYour Result....");
-//             System.out.println ("\nThe Positive Numbers Quantity: " + positive);
-//             System.out.println("\nThe Negative Numbers Quantity:  " + negative);
-//             System.out.println("\nThe Zero Number's Quantity: " + zero);
+            System.out.println ("\nYour Result....");
+            System.out.println ("\nThe Positive Numbers Quantity: " + positive);
+            System.out.println("\nThe Negative Numbers Quantity:  " + negative);
+            System.out.println("\nThe Zero Number's Quantity: " + zero);
             
-//             sc.close(); //closing the 'Scanner' object to prevent memory leakage.
+            sc.close(); //closing the 'Scanner' object to prevent memory leakage.
 
 
-//       }
+      }
       
       
       
       
-//       public static void main (String[] args) {
-//             //Here we using this 'function(main)' to give the user his/her instructions for using our Counter.
-//             System.out.println("Read It Carefully.......");
-//             System.out.println("\nHere we count about positive, negative and zeros.");
-//             System.out.println("\nThat's mean: How much you have positive, negative and zero numbers?");
-//             System.out.println("\nInstructions:");
-//             System.out.println("\n1: If you type 'y' or 'yes'.... That's mean: You want to be countinue our counter. ");      
-//             System.out.println("\n2: If you type 'n' or 'no'.... That's mean: You don't want to be countinue our counter. Then our counter will be stop and it will give you, your result. ");
-//             System.out.println("\nAlright, Let's Go!.....");
+      public static void main (String[] args) {
+            //Here we using this 'function(main)' to give the user his/her instructions for using our Counter.
+            System.out.println("Read It Carefully.......");
+            System.out.println("\nHere we count about positive, negative and zeros.");
+            System.out.println("\nThat's mean: How much you have positive, negative and zero numbers?");
+            System.out.println("\nInstructions:");
+            System.out.println("\n1: If you type 'y' or 'yes'.... That's mean: You want to be countinue our counter. ");      
+            System.out.println("\n2: If you type 'n' or 'no'.... That's mean: You don't want to be countinue our counter. Then our counter will be stop and it will give you, your result. ");
+            System.out.println("\nAlright, Let's Go!.....");
   
          
          
-//             counterPNZ(); //We call this function for start to execute the opperation.
+            counterPNZ(); //We call this function for start to execute the opperation.
 
-//       }
-//   }
+      }
+       
+  }
 
