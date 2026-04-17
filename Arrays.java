@@ -77,7 +77,7 @@ import java.util.Scanner;
           System.out.println("Sorry, your number is not in this array!");
         }
 
-        sc.close();
+        sc.close(); //Closing the 'Scanner' object to prevent memory leakage.
 
       } 
     
