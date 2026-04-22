@@ -7,7 +7,7 @@ import java.util.Scanner;
                                    //Using 'arr[]' for getting the all value of index and operands from index value's.
         public static void findMax(int arr[]) {
 
-            int max = Integer.MIN_VALUE; //Initialling with the highest possible minimum value of integer.
+            int max = Integer.MIN_VALUE; //Initialing with the highest possible minimum value of integer.
 
             for(int i = 0; i < arr.length; i++) {
                 if(arr[i] > max) {
