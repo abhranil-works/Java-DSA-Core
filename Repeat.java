@@ -91,11 +91,13 @@ import java.util.Scanner;
           
          case 4: 
          if (number2 != 0) {   // We use this logic for protecting the error of the calulation from Division.
-            System.out.println("\n Resutl: " + (number1 / number2));
+            System.out.println("\n Result: " + (number1 / number2));
 
          } else {
             System.out.println("\n Result: Can't Divided by 0");
          }
+          break;
+          
 
          case 5: 
          if (number2 != 0) {   // We use this logic for protecting the error of the calulation from Remainder.
@@ -104,6 +106,7 @@ import java.util.Scanner;
          } else {
             System.out.println("\n Result: Can't Divided by 0");
          }
+          break;
 
          default: System.out.println("\n Result: Your Choice Is Incorrect. Try Again!"); // We use this logic for protecting the error of the calulation from incorrect choice.
 
@@ -121,7 +124,7 @@ import java.util.Scanner;
       System.out.println("Calculator Menu:");
       System.out.println("1: Addition or +");
       System.out.println("2: Substraction or -");
-      System.out.println("3: Muslitiplication or *");
+      System.out.println("3: Multiplication or *");
       System.out.println("4: Divison or /");
       System.out.println("5: Remainder or %");
 
@@ -129,10 +132,10 @@ import java.util.Scanner;
       int choice = sc.nextInt();
 
       System.out.print("\n Enter the first calculation value: ");
-      double number1 = sc.nextInt();
+      double number1 = sc.nextDouble();
 
       System.out.print("\n Enter the second calculation value: ");
-      double number2 = sc.nextInt();
+      double number2 = sc.nextDouble();
 
 
       basicCalculator(choice, number1, number2);
