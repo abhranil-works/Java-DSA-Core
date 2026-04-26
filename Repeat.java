@@ -163,9 +163,9 @@ import java.util.Scanner;
     public static void printPattern(int rowCount, int colCount, String symbol) {
 
         //Using Nested 'for-loop' for the pattern logic.
-        //Outer loop.
-
+        
         if (rowCount > 0 && colCount > 0) { //Using 'if-else' to protect from negative values', which can instantly terminat the loop.
+        //Outer loop.
         for(int i = 1; i <= rowCount; i++) {
             //inner loop.
             for(int j = 1; j <= colCount; j++) {
@@ -207,3 +207,6 @@ import java.util.Scanner;
           
       }
   }
+
+
+  
