@@ -47,6 +47,7 @@ import java.util.Scanner;
         
 
         sc.close(); //Closing the 'Scanner' object to prevent memory leaks.
+        //Thanks.
           
       }
   }
