@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //1: Full Pyramid.
 
-    public static void printPattern(int rowCount, String symbol) {
+    public static void fullPyramid(int rowCount, String symbol) {
 
         //Using Nested 'for-loop' for the pattern logic.
 
@@ -160,7 +160,65 @@ import java.util.Scanner;
       }
     }
 
-    //7: 
+    //7: Butterfly Pattern.
+
+    public static void butterflyPattern(int rowCount, String symbol) {
+
+        
+       if(rowCount > 0) {
+        //Butterfly Upper Body.
+
+        for(int i = 1; i <= rowCount; i++) {
+            //1st Inner loop for left wing of the Butterfly.
+            for(int j = 1; j<= i; j++) {
+                System.out.print(symbol + " ");
+            }
+
+            //2nd Inner loop for the spaces between the wings of the Butterfly.
+            for(int j = 1; j <= 2 * (rowCount - i); j++) {
+                System.out.print("  ");
+
+            }
+
+            //3rd Inner loop for right wing of the Butterfly.
+            for(int j = 1; j <= i; j++) {
+                System.out.print(symbol + " ");
+
+            }
+
+            System.out.println(); //Row blocks/pixels printing for inner loop operation.
+
+        }
+
+        //Butterfly Lower Body.
+
+        for(int i = rowCount - 1; i >= 1; i--) {
+            //1st Inner loop for left wing of the Butterfly.
+            for(int j = 1; j<= i; j++) {
+                System.out.print(symbol + " ");
+            }
+
+            //2nd Inner loop for the spaces between the wings of the Butterfly.
+            for(int j = 1; j <= 2 * (rowCount - i); j++) {
+                System.out.print("  ");
+
+            }
+
+            //3rd Inner loop for right wing of the Butterfly.
+            for(int j = 1; j <= i; j++) {
+                System.out.print(symbol + " ");
+
+            }
+
+            System.out.println(); //Row blocks/pixels printing for inner loop operation.
+
+        }
+
+       } else {
+        System.out.println("Your Input (Row) do not match our condition. Please enter values greater than 0.");
+       }
+
+    }
 
 
 
@@ -172,19 +230,20 @@ import java.util.Scanner;
         // System.out.println("Let's Print a Numeric Inverted Half Pyramid Pattern.");
         // System.out.println("Let's Print a Rotated Numeric Inverted Half Pyramid Pattern.");
         //System.out.println("Let's Print a Floyd's Triangle Pattern.");
-        System.out.println("Let's print a 0-1 Triangle Pattern.");
+        // System.out.println("Let's print a 0-1 Triangle Pattern.");
+        System.out.println("Let's Print a Butterfly Pattern.");
         System.out.print("\n Enter The Row Number (Without Decimal): ");
         int rowCount = sc.nextInt();
         
-        // sc.nextLine(); //Using it as a 'Buffer' for cleaning the 'Enter or Return' key (that is a String) to protect the 'symbol input' space.
+        sc.nextLine(); //Using it as a 'Buffer' for cleaning the 'Enter or Return' key (that is a String) to protect the 'symbol input' space.
 
-        // System.out.print("\n Enter the symbol (e.g. @, #, *, A,a etc.) you want to show in you pattern: ");
-        // String symbol = sc.nextLine();
+        System.out.print("\n Enter the symbol (e.g. @, #, *, A,a etc.) you want to show in you pattern: ");
+        String symbol = sc.nextLine();
 
 
         System.out.println(" Result:____________\n");
 
-        zeroOneTriangle(rowCount);     
+        butterflyPattern(rowCount, symbol);     
 
         sc.close(); //Closing the 'Scanner' object to prevent memory leaks.
           
