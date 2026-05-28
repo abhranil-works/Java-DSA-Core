@@ -131,6 +131,7 @@ import java.util.Scanner;
                 System.out.println(); //Row blocks/pixels printing for inner loop operation.
             }
         } else {
+            
             System.out.println("Your Input (Row) do not match our condition. Please enter values greater than 0.");
         }
     }
@@ -156,6 +157,7 @@ import java.util.Scanner;
             System.out.println(); //Row blocks/pixels printing for inner loop operation.
          }
       } else {
+
          System.out.println("Your Input (Row) do not match our condition. Please enter values greater than 0.");
       }
     }
@@ -215,9 +217,39 @@ import java.util.Scanner;
         }
 
        } else {
+
         System.out.println("Your Input (Row) do not match our condition. Please enter values greater than 0.");
        }
 
+    }
+
+
+    //8: Soild Rhombus Pattern.
+
+    public static void soildRhombus(int rowCount, String symbol) {
+
+
+        if(rowCount > 0) {
+
+            for(int i = 1; i <= rowCount; i++) {
+                //1st Inner loop for maintaining the front spaces.
+                for(int j = 1; j <= rowCount - i; j++) {
+                    System.out.print("  ");
+
+                }
+
+                //2nd Inner loop for printing the symbols for the Rhombus Pattern.
+                for(int j = 1; j <= rowCount; j++) {
+                    System.out.print(symbol + " ");
+
+                }
+
+                System.out.println(); //Row blocks/pixels printing for inner loop operation.
+            }
+        } else {
+
+            System.out.println("Your Input (Row) do not match our condition. Please enter values greater than 0.");
+        }
     }
 
 
@@ -231,7 +263,8 @@ import java.util.Scanner;
         // System.out.println("Let's Print a Rotated Numeric Inverted Half Pyramid Pattern.");
         //System.out.println("Let's Print a Floyd's Triangle Pattern.");
         // System.out.println("Let's print a 0-1 Triangle Pattern.");
-        System.out.println("Let's Print a Butterfly Pattern.");
+        // System.out.println("Let's Print a Butterfly Pattern.");
+        System.out.println("Let's Print a Soild Rhombus Pattern.");
         System.out.print("\n Enter The Row Number (Without Decimal): ");
         int rowCount = sc.nextInt();
         
@@ -243,7 +276,7 @@ import java.util.Scanner;
 
         System.out.println(" Result:____________\n");
 
-        butterflyPattern(rowCount, symbol);     
+        soildRhombus(rowCount, symbol);     
 
         sc.close(); //Closing the 'Scanner' object to prevent memory leaks.
           
