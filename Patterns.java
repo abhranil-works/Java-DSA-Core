@@ -329,6 +329,9 @@ import java.util.Scanner;
 
 
             
+        } else {
+
+            System.out.println("Your Input (Row) do not match our condition. Please enter values greater than 0.");
         }
     }
 
@@ -354,15 +357,15 @@ import java.util.Scanner;
         System.out.print("\n Enter The Row Number (Without Decimal): ");
         int rowCount = sc.nextInt();
         
-        // sc.nextLine(); //Using it as a 'Buffer' for cleaning the 'Enter or Return' key (that is a String) to protect the 'symbol input' space.
+        sc.nextLine(); //Using it as a 'Buffer' for cleaning the 'Enter or Return' key (that is a String) to protect the 'symbol input' space.
 
-        // System.out.print("\n Enter the symbol (e.g. @, #, *, A,a etc.) you want to show in you pattern: ");
-        // String symbol = sc.nextLine();
+        System.out.print("\n Enter the symbol (e.g. @, #, *, A,a etc.) you want to show in you pattern: ");
+        String symbol = sc.nextLine();
 
 
         System.out.println(" Result:____________\n");
 
-        diamondPattern(rowCount, "*");     
+        diamondPattern(rowCount, symbol);     
 
         sc.close(); //Closing the 'Scanner' object to prevent memory leaks.
           
