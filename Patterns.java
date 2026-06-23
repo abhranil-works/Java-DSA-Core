@@ -171,7 +171,7 @@ import java.util.Scanner;
         //Butterfly Upper Body.
 
         for(int i = 1; i <= rowCount; i++) {
-            //1st Inner loop for left wing of the Butterfly.
+            //1st Inner loop for left wing of the Butterfly. 
             for(int j = 1; j<= i; j++) {
                 System.out.print(symbol + " ");
             }
@@ -244,7 +244,7 @@ import java.util.Scanner;
 
                 }
 
-                System.out.println(); //Row blocks/pixels printing for inner loop operation.
+                System.out.println(); //Row blocks/pixels printing for inner loop operation. 
             }
         } else {
 
@@ -283,6 +283,59 @@ import java.util.Scanner;
 
     }
 
+    //10: Diamond Pattern.
+
+    public static void diamondPattern(int rowCount, String symbol) {
+        
+        if(rowCount > 0) {
+            //Diamond Upper Body.
+
+            for(int i = 1; i <= rowCount; i++) {
+                //1st Inner loop for maintaining the spaces for Diamond pattern's view.
+
+                for(int j = 1; j <= rowCount - i; j++) {
+                    System.out.print(" ");
+
+                }
+                //2nd Inner loop for the Diamond shape.
+
+                for(int j = 1; j <= i; j++) {
+                    System.out.print(symbol + " ");
+
+                }
+
+                System.out.println(); //Row blocks/pixels printing for inner loop operation.
+            }
+
+
+            //Diamond Lower Body.
+
+             for(int i = rowCount - 1; i >= 1; i--) {
+                //1st Inner loop for maintaining the spaces for Diamond pattern's view.
+
+                for(int j = 1; j <= rowCount - i; j++) {
+                    System.out.print(" ");
+
+                }
+                //2nd Inner loop for the Diamond shape.
+
+                for(int j = 1; j <= i; j++) {
+                    System.out.print(symbol + " ");
+
+                }
+
+                System.out.println(); //Row blocks/pixels printing for inner loop operation.
+            }
+
+
+            
+        }
+    }
+
+
+
+
+
 
 
 
@@ -296,7 +349,8 @@ import java.util.Scanner;
         // System.out.println("Let's print a 0-1 Triangle Pattern.");
         // System.out.println("Let's Print a Butterfly Pattern.");
         // System.out.println("Let's Print a Soild Rhombus Pattern.");
-        System.out.println("Let's Print a Number Pyramid Pattern");
+        // System.out.println("Let's Print a Number Pyramid Pattern");
+        System.out.println("Let's Print a Diamond Pattern.");
         System.out.print("\n Enter The Row Number (Without Decimal): ");
         int rowCount = sc.nextInt();
         
@@ -308,7 +362,7 @@ import java.util.Scanner;
 
         System.out.println(" Result:____________\n");
 
-        numberPyramid(rowCount);     
+        diamondPattern(rowCount, "*");     
 
         sc.close(); //Closing the 'Scanner' object to prevent memory leaks.
           
